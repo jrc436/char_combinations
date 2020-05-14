@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 import math
 from typing import List, Tuple
@@ -74,16 +76,33 @@ def print_party(members: List[Character]) -> str:
 def insert_to_top_parties(new_party: List[Character], top_parties: List[Tuple[str, float]], k: int) -> None:
     # Using binary search here would be better than linear search, but isn't that important if
     # number of top_parties (i.e., top_k) is small.
+    if k == -1:
+        insert_to_top_parties_tie(new_party, top_parties)
+        return
     new_party_score, martial_ratio = score_party(new_party)
     i = len(top_parties)
     while i > 0 and top_parties[i - 1][1] < new_party_score:
         i -= 1
     if i == len(top_parties) and len(top_parties) < k:
-        top_parties.append((print_party(new_party), new_party_score, ))
+        top_parties.append((print_party(new_party), new_party_score, martial_ratio))
     elif i < len(top_parties):
         top_parties.insert(i, (print_party(new_party), new_party_score, martial_ratio))
         if len(top_parties) > k:
             top_parties.pop()
+
+def _approx_equal(score1: float, score2: float) -> bool:
+    return math.abs(score1 - score2) < 0.001
+
+def insert_to_top_parties_tie(new_party: List[Character], top_parties: List[Tuple[str, float]]) -> None:
+    new_party_score, martial_ratio = score_party(new_party)
+    if not top_parties or new_party_score - top_parties[0][1] > 0.001:
+        # This is a new high score!
+        top_parties.clear()
+        top_parties.append((print_party(new_party), new_party_score, martial_ratio))
+
+    elif abs(new_party_score - top_parties[0][1]) < 0.001:
+        # Another good party.
+        top_parties.append((print_party(new_party), new_party_score, martial_ratio))
 
 
 def _num_combinations(k: int, n: int):
