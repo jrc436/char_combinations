@@ -1,0 +1,17 @@
+This was made over too much time while trying to determine an optimal party configuration to play Temple of Elemental Evil.
+
+In the game, you start by creating a party of five characters. It follows, roughly D&D 3.0 rules. As a longtime DM, I have a
+host of characters that I've written over the years, but I had never put them together into a party that would also feel
+'balanced' for video game purposes. Some of the characters I subjectively like more than others, but it was also important
+to actually have a good balance of classes and some diversity.
+
+Then, this reads a CSV, tries every combination of the characters, and chooses the K highest scoring ones. At first, I
+thought to just do the five for loops version, but I was too embarassed with myself so ended up writing the general
+case
+
+
+Usage:
+See char_data.csv for example data (with a header)
+
+Only positional command line arguments, sorry :)
+python analyze_char_combos.py $filename [$num_combinations_to_print] [$party_size] [$use_header]

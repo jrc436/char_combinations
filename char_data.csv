@@ -1,0 +1,21 @@
+Name,Class,Martial/Magic,Adjusted Importance,Gender,Race,Adjustment,Importance
+Barbaroxil,Barbarian,1,1,F,Human OR Dwarf OR Half-Orc,1,1
+Qenognie ,Cleric,0.33,0.8,F,Human OR Halfling OR Gnome,0.2,0.8
+Sitaara ,Cleric,0.33,0.8,F,Human,,0.8
+Creed ,Ranger,0.67,0.9,M,Elf OR Half-Elf OR Human,,0.9
+Slog ,Fighter,1,1,M,Half-Orc,,1
+Eltoris ,Wizard,0,1,M,Elf,,1
+Iglea ,Paladin,0.67,0.9,M,Half-Elf,,0.9
+Filarion ,Bard,0.2,0.9,M,Half-Elf,,0.9
+Lorsann ,Druid,0.1,0.7,M,Elf,,0.7
+Pitgurat ,Barbarian,1,0.7,M,Half-Orc OR Dwarf,0.4,0.7
+Percy ,Sorcerer,0.1,0.6,M,Human,,0.6
+Osi ,Rogue,0.9,0.6,M,Gnome,,0.6
+Harbek ,Druid,0.1,0.6,M,Dwarf,,0.6
+Raven ,Paladin,0.67,0.5,M,Human,,0.5
+Phineas ,Rogue,1,0.4,M,Halfling,,0.4
+Samdereli ,Paladin,0.67,0.4,M,Human,,0.4
+Amrynn ,Monk,1,0.4,F,Elf,,0.4
+Pogrim ,Wizard,0,0.5,M,Gnome,,0.5
+Mazara ,Wizard,0,1,F,Elf,,1
+Nymara,Rogue,1,1,F,Elf,,1
